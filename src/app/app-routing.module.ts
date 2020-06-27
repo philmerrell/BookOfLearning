@@ -9,8 +9,16 @@ const routes: Routes = [
     loadChildren: () => import('./sentences/sentences.module').then( m => m.SentencesPageModule)
   },
   {
-    path: 'sight-words',
-    loadChildren: () => import('./sight-words/sight-words.module').then( m => m.SightWordsPageModule)
+    path: 'first-grade-sight-words',
+    loadChildren: () => import('./first-grade-sight-words/first-grade-sight-words.module').then( m => m.FirstGradeSightWordsPageModule)
+  },
+  {
+    path: 'kindergarten-sight-words',
+    loadChildren: () => import('./kindergarten-sight-words/kindergarten-sight-words.module').then( m => m.KindergartenSightWordsPageModule)
+  },
+  {
+    path: 'saved-words',
+    loadChildren: () => import('./saved-words/saved-words.module').then( m => m.SavedWordsPageModule)
   },
 ];
 
