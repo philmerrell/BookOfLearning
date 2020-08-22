@@ -8,5 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <word-slider [words]="firstGradeWords"></word-slider>
+  <!-- <word-slider [words]="firstGradeWords"></word-slider> -->
+  <ion-list>
+    <ion-item *ngFor="let word of words" (click)="saveOrRemoveWord(word)">
+      <ion-icon *ngIf="!word.isSaved" slot="start" name="star-outline"></ion-icon>
+      <ion-icon *ngIf="word.isSaved" slot="start" name="star" color="warning"></ion-icon>
+      <ion-label>
+        <h1 style="font-size: 2em;">{{ word.text }}</h1>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

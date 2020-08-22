@@ -26,10 +26,10 @@ export class WordSliderComponent implements OnInit {
     return this.slider.getActiveIndex();
   }
 
-  async getSavedWords() {
-    this.savedWords = await JSON.parse((await Storage.get({key: 'savedWords'})).value) || [];
-    console.log(this.savedWords);
-  }
+    async getSavedWords() {
+      this.savedWords = await JSON.parse((await Storage.get({key: 'savedWords'})).value) || [];
+      console.log(this.savedWords);
+    }
 
   async slideDidChange() {
     this.currentIndex = await this.getActiveIndex();

@@ -1,9 +1,5 @@
 <ion-slides #slider (ionSlideDidChange)="slideDidChange()" [options]="{autoHeight: true}" pager="true">
   <ion-slide *ngFor="let word of words">
     <h1 style="font-size: 60px;">{{ word }}</h1>
-    <ion-button (click)="saveOrRemoveWord(word)" [color]="isSaved ? 'danger' : 'success'" expand="block">
-      <span *ngIf="!isSaved">Add</span>
-      <span *ngIf="isSaved">Remove</span>
-    </ion-button>
   </ion-slide>
 </ion-slides>
